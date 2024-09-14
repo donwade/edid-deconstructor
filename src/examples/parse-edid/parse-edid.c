@@ -30,6 +30,8 @@
 
 #define _GNU_SOURCE
 
+#define ARRAY_SIZE(X) ( sizeof(X)/sizeof(X[0]))
+
 #include <math.h>
 #include <stdio.h>
 #include <stddef.h>

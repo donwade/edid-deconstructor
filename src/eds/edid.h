@@ -260,13 +260,13 @@ struct __attribute__ (( packed )) edid_standard_timing_descriptor {
     unsigned image_aspect_ratio : 2;
 };
 
-const inline uint32_t
+const uint32_t
 edid_standard_timing_horizontal_active(const struct edid_standard_timing_descriptor * const desc)
 {
     return ((desc->horizontal_active_pixels + 31) << 3);
 }
 
-const inline uint32_t
+const  uint32_t
 edid_standard_timing_vertical_active(const struct edid_standard_timing_descriptor * const desc)
 {
     const uint32_t hres = edid_standard_timing_horizontal_active(desc);
@@ -285,7 +285,7 @@ edid_standard_timing_vertical_active(const struct edid_standard_timing_descripto
     return hres;
 }
 
-const inline uint32_t
+const  uint32_t
 edid_standard_timing_refresh_rate(const struct edid_standard_timing_descriptor * const desc)
 {
     return (desc->refresh_rate + 60);
